@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    /*Colores*/
+    --negro_transparente: #0000007e;
+    --gris_Claro: #f0f0f0;
+    --blanco: #fff;
+
+    /* Tipográfia */
+    --font_principal: "Montserrat", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    font-family: var(--font_principal);
+}
+
+body{
+    background-color: var(--gris_Claro);
+}
+
+/*NAV*/
+nav {
+    height: 70px;
+    background-color: var(--negro_transparente); 
+}
+  
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 px;
+}
+  
+.brand-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+  
+  
+.logo img {
+    width:70px;
+    height: auto;
+    margin-right: 10px;
+}
+  
+.brand-title {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+    white-space: nowrap; 
+}
+  
+.menu-icon {
+   font-size: 2em;
+}
+ 
+.user-view{
+   height: 180px;
+}
+  /*-- NAV --*/
+
+
+.main-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

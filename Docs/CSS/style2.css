@@ -1,0 +1,73 @@
+
+  
+.input-contenedor{
+    display: flex;
+    /* gap: 10px */
+    background-color: var(--blanco);
+    border-radius: 50px;
+    width: 90%;
+    margin-top: 50px;
+}
+
+form, input{
+    border: none;
+    outline: no;
+}
+
+/* .text__input{
+    width: 100%;
+    font-size: 1em;
+} */
+
+
+.text__input, .btn, .list{
+    padding: 10px;
+    /* border-radius: 10px; */
+    border-radius: 50px;
+    border: none;
+}
+
+.btn{ 
+    width: 30%;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 9px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+/* .btn:hover{
+    background-color: ;
+} */
+
+input:not([type]),input[type=text]:not(.browser-default), textarea.materialize-textarea {
+    border-bottom: transparent;
+    padding:  0 10px;
+
+}
+
+input:not([type]):focus:not([readonly]),input[type=text]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]),textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: transparent;
+    box-shadow: none;
+    padding: 0 10px;
+}
+
+.card{
+    border-radius: 10px;
+}
+
+.card-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn_detalles{
+    width: 45%;
+}
+
+.container{
+    margin-top: 20px;
+}
