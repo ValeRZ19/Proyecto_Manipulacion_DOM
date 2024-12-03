@@ -1,26 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
-    M.AutoInit();
- });
-
 
 let paises = [];
 
-async function ObtenerAPI() {
+async function ObtenerPaises() {
     try {
         const storePaises = localStorage.getItem('paises');
         
         if(storePaises){
             paises = JSON.parse(storePaises);
-            console.log(paises)
+            console.log('localstorage',paises)
         }
         else{
-            const respuesta = await fetch('https://restcountries.com/v3.1/all')
-            const pais = await respuesta.json();
-            localStorage.setItem('paises', JSON.stringify(pais)); 
-            console.log('', pais);
+            const llamadaApi = await fetch('https://restcountries.co/v3.1/all')
+            const respuesta = await llamadaApi.json();
+            console.log('paises', respuesta)
+            localStorage.setItem('paises', JSON.stringify(respuesta)); 
+            return respuesta
         }
     } catch (error) {
         console.log('Error al realizar la consulta', error)
     }
 }
- 
+
+

@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet" href="/Docs/CSS/style.css">
+    <link rel="stylesheet" href="/Docs/CSS/style2.css">
     <title>Actividad de Comprobación</title>
 </head>
 <body>
@@ -62,18 +63,26 @@
             </div>
           </nav>
     </header>
-    <main>
-        <img src="" alt="">
+    <main class="main-container">
+        <!-- <img src="/Imgs/" alt=""> -->
+        <section class="input-contenedor"  >
+            <input class="text__input" type="text" name="" id="input__texto" placeholder="Ingrese el nombre de un país" autofocus>
+            <button class="btn btn-primary" id="btnBuscar">Buscar</button>
+        </section>
 
+        <section class="container">
+            <section id="contenedor_cartas" class="contenedor_cartas row">
+
+            </section>  
+        </section>
     </main>
     <footer>
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
     <script src="/Docs/JS/index.js"></script>
-    <script>
-        ObtenerPaises();
-    </script>
+    <script src="/Docs/JS/paises.js"></script>
+    
+    
 </body>
 </html>

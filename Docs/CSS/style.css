@@ -4,7 +4,7 @@
 
 :root{
     /*Colores*/
-    --negro_transparente: #0000007e;
+    --negro_transparente: rgba(0, 0, 0, 0.651);
     --gris_Claro: #f0f0f0;
     --blanco: #fff;
 
@@ -27,48 +27,26 @@ body{
     background-color: var(--gris_Claro);
 }
 
-/*NAV*/
 nav {
-    height: 70px;
+    height: 80px;
     background-color: var(--negro_transparente); 
 }
-  
-.nav-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    padding: 0 px;
+
+nav,
+.offcanvas {
+    background-color: #0000006b;
 }
-  
-.brand-logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.navbar-toggler {
+  border: none;
 }
-  
-  
-.logo img {
-    width:70px;
-    height: auto;
-    margin-right: 10px;
-}
-  
-.brand-title {
-    font-size: 1em;
-    font-weight: bold;
-    margin: 0;
-    white-space: nowrap; 
-}
-  
-.menu-icon {
-   font-size: 2em;
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
 }
  
 .user-view{
    height: 180px;
 }
-  /*-- NAV --*/
 
 
 .main-container{
@@ -78,4 +56,28 @@ nav {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+
+@media screen and (min-width:1000px){
+   
+   .navbar{
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        animation: enhance-header linear both;
+        animation-timeline: scroll(root);
+        animation-range:  0 200px;
+   }
+
+
+   @keyframes enhance-header {
+        0%{
+            height: 75px;
+        }
+        100%{
+            height: 60px;
+            background-color: #000000af;
+        }
+   }
 }
