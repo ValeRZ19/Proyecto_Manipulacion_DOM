@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet" href="/Docs/CSS/style.css">
     <link rel="stylesheet" href="/Docs/CSS/style2.css">
+    <link rel="stylesheet" href="/Docs/CSS/filterMap.css">i
     <title>Actividad de Comprobación</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark">
             <!-- NAV CONTAINER START -->
             <div class="container-fluid">
-              <a href="" class="navbar-brand text-ligth fw-semibold fs-4">Proyect</a>
+              <a href="" class="navbar-brand text-ligth fw-semibold fs-4">Proyecto</a>
       
               <!-- NAV BUTTON  -->
               <button
@@ -64,20 +65,48 @@
           </nav>
     </header>
     <section class="parallax">
-      <h2 id="title" class="title">Countries List</h2>
+      <h2 id="title" class="title">Filter by region</h2>
       <img class="imgCosmos" src="/Imgs/cosmos.jpg" id="imgCosmos">
       <img class="imgEarth" src="/Imgs/Earth.png" id="imgEarth">
       <img class="imgGround" src="/Imgs/ground.png" >
   </section>
     <main class="main-container">
         <!-- <img src="/Imgs/" alt=""> -->
-        <section class="input-container"  >
-            <input class="text__input" type="text" name="" id="input__text" placeholder="Enter the name of a country" autofocus>
-            <button class="btn btn-primary" id="btnSearch">Search</button>
+        <section class="select-container"  >
+            <img src="/Imgs/map-307405_640.png" alt="map">
+            <label class="pin americas">
+              <input type="radio" name="region" value="Americas">
+              <span>Americas</span>
+          </label>
+      
+          <label class="pin europe">
+              <input type="radio" name="region" value="Europe">
+              <span>Europe</span>
+          </label>
+      
+          <label class="pin asia">
+              <input type="radio" name="region" value="Asia">
+              <span>Asia</span>
+          </label>
+      
+          <label class="pin africa">
+              <input type="radio" name="region" value="Africa">
+              <span>Africa</span>
+          </label>
+      
+          <label class="pin antarctic">
+              <input type="radio" name="region" value="Antarctic">
+              <span>Antarctic</span>
+          </label>
+
+          <label class="pin oceania">
+            <input type="radio" name="region" value="Oceania">
+            <span>Oceania</span>
+        </label>
         </section>
 
         <section class="container">
-            <section id="cards_container" class="card_container row">
+            <section id="cards_container" class="cards_container row">
 
             </section>  
         </section>
@@ -91,6 +120,5 @@
     <script src="/Docs/JS/index.js"></script>
     <script src="/Docs/JS/countries.js"></script>
     <script src="/Docs/JS/animations.js"></script>
-    
 </body>
 </html>

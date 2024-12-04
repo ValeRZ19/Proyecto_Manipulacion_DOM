@@ -14,9 +14,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-// function ordenarAlfabeticamente(){
-    
-// }
 
 function showCountries(countries){
     cardsContainer.innerHTML = ''; 
@@ -42,7 +39,6 @@ function showCountries(countries){
             modal.id = `modal${country.cca2}`;
             modal.classList.add('modal', 'fade');
             modal.setAttribute('tabindex', '-1');
-            modal.setAttribute('aria-labelledby', `modalLabel${country.cca2}`);
 
             let currencies = country.currencies ? `${Object.values(country.currencies)[0].name} 
                 (${Object.values(country.currencies)[0].symbol})`
@@ -79,30 +75,51 @@ function showCountries(countries){
 }
 
 
-// const btnSearch = document.getElementById('btnSearch');
-// const input = document.getElementById('input__text')
+const btnSearch = document.getElementById('btnSearch');
+const input = document.getElementById('input__text')
 
-// btnSearch.addEventListener('click', () => {
-//     const input__text = input.value.trim().toLowerCase();
-
-//     const filterCountry = countries.filter(country =>
-//         country.name.common.toLowerCase().includes(input__text) || country.cca2.toLowerCase().includes(input__text)
-//     );
-
-//     showCountries(filterCountry); 
-// });
+if(btnSearch && input){
+    btnSearch.addEventListener('click', () => {
+        const input__text = input.value.trim().toLowerCase();
+    
+        const filterCountry = countries.filter(country =>
+            country.name.common.toLowerCase().includes(input__text) || country.cca2.toLowerCase().includes(input__text)
+        );
+    
+        showCountries(filterCountry); 
+    });
+};
 
 let regionSelect = document.getElementById('select_region');
-regionSelect = document.addEventListener('change', (event)=>{
-    const region = event.target.value;
-    const countries = JSON.parse(localStorage.getItem('countries'));
-    let filter;
+if(regionSelect){
+    regionSelect = document.addEventListener('change', (event)=>{
+        const region = event.target.value;
+        
+        let filter;
+    
+        if (region.selectedIndex === 0) {
+            filter = countries;
+        } else {
+            filter = countries.filter(country => country.region === region); 
+        }
+    
+        showCountries(filter); 
+    });
+};
 
-    if (region.selectedIndex === 0) {
-        filter = countries;
-    } else {
-        filter = countries.filter(country => country.region === region); 
-    }
 
-    showCountries(filter); 
-})
+const radios = document.querySelectorAll('.pin input[type="radio"]');
+if(radios){
+    radios.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            const selectedRegion = e.target.value;
+            console.log('region:', selectedRegion);
+
+            const countries = JSON.parse(localStorage.getItem('countries'));
+            const filteredCountries = countries.filter(country => country.region === selectedRegion);
+
+            showCountries(filteredCountries); 
+        });
+    });
+
+};

@@ -6,14 +6,15 @@ form, input{
 .input-container, .select-container{
   display: flex;
   /* gap: 10px */
-  background-color: var(--blanco);
   border-radius: 50px;
   width: 90%;
-  margin-top: 50px;
+  margin-top: 40px;
+  padding: 2px;
 }
 
 .input-container{
     padding: 5px;
+    background-color: var(--white);
 }
 
 .select-container{
@@ -26,10 +27,6 @@ form, input{
     font-size: 1em;
 }
 
-/* .text__input::placeholder{
-    color: var(--purple);
-    } */
-    
 .text__input:focus{
     outline: none;
     border: none;
@@ -117,7 +114,7 @@ form, input{
 
 
 @media screen and (min-width:1000px){
-   
+
     .header-section{
     
         margin-bottom: 150px;
@@ -133,6 +130,7 @@ form, input{
     .input-container{
         width: 75%;
         margin-top: 100px;
+       
     }
 
     .card{
@@ -161,4 +159,7 @@ form, input{
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+
+
 }
