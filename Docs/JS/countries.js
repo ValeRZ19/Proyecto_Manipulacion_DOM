@@ -44,12 +44,9 @@ function showCountries(countries){
             modal.setAttribute('tabindex', '-1');
             modal.setAttribute('aria-labelledby', `modalLabel${country.cca2}`);
 
-            let currencies = '';
-            if (country.currencies) {
-                currencies = Object.values(country.currencies)
-                    .map(currency => `${currency.name} (${currency.symbol})`)
-                    .join(' - ');
-            }
+            let currencies = country.currencies ? `${Object.values(country.currencies)[0].name} 
+                (${Object.values(country.currencies)[0].symbol})`
+                : 'No currencies found'
 
             modal.innerHTML = `
             <div class="modal-dialog modal-dialog-centered">
