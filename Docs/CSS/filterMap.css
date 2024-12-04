@@ -1,6 +1,7 @@
 
 .select-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%; 
@@ -13,6 +14,13 @@
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.paragrahp{
+    margin-top: 50px;
+    margin-bottom: -90px;
+    text-align: center;
+    font-weight: 600;
 }
 
 .pin {
@@ -134,41 +142,42 @@
 
 @media screen and (min-width:1000px){
 
+    .paragrahp{
+        font-size: 1.5em;
+        margin-top: 150px;
+    }
+
     .select-container img{
         width: 150%;
-        background-color: var(--white);
-        padding: 15px;
-        border-radius: 10px;
     }
        
     .americas{
-        top: 125%;
-        left: 41%;
+        top: 160%;
+        left: 31%;
     }
 
-
     .europe {
-        top: 118%;
-        left: 55%;
+        top: 145%;
+        left: 65%;
     }
 
     .asia {
-        top: 124%;
-        left: 55%;
+        top: 155%;
+        left: 60%;
     }
 
     .africa {
-        top: 130%;
+        top: 170%;
         left: 51%;
     }
 
     .oceania {
-        top: 134%;
-        left: 60%;
+        top: 180%;
+        left: 70%;
     }
 
     .antarctic {
-        top: 140%;
+        top: 194%;
         left: 51%;
     }
 

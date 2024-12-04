@@ -1,8 +1,11 @@
 
 let countries = [];
 
+
+//Function that fetchs countries data from the API 
 async function getCountries() {
     try {
+        // checks if country data already exists in localStorage
         const storeCountries = localStorage.getItem('countries');
         
         if(storeCountries){
@@ -11,6 +14,7 @@ async function getCountries() {
             return countries;
         }
         else{
+             //if no data is found in localStorage, fetch it from the API and load it in the localStorage
             const llamadaApi = await fetch('https://restcountries.com/v3.1/all')
             const response = await llamadaApi.json();
             console.log('countries', response)

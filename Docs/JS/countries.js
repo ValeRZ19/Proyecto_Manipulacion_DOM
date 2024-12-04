@@ -1,8 +1,8 @@
 
 const cardsContainer= document.getElementById('cards_container');
 
+//When the page loads, check for countries data in localStorage
 document.addEventListener('DOMContentLoaded', async () => {
-    // const key = 'countries';
     const storeCountries = localStorage.getItem('countries');
 
     if (storeCountries) {
@@ -14,14 +14,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-
+//Function that renders countries into the DOM
 function showCountries(countries){
     cardsContainer.innerHTML = ''; 
 
     if(countries.length > 0){
+
+        //Sort countries alphabetically by common name
         countries.sort((a,b) =>{
             return a.name.common.localeCompare(b.name.common);
         });
+
+        //Loop through each country and create cards for de DOM
         countries.forEach(country => {
             const card = document.createElement('div');
             card.classList.add('col-12');
@@ -70,11 +74,11 @@ function showCountries(countries){
         
     }
     else{
-
+        console.log('No countries to show');
     }
 }
 
-
+//Search functionality
 const btnSearch = document.getElementById('btnSearch');
 const input = document.getElementById('input__text')
 
@@ -90,7 +94,9 @@ if(btnSearch && input){
     });
 };
 
-let regionSelect = document.getElementById('select_region');
+
+//filtering countries by region using a dropdown
+const regionSelect = document.getElementById('select_region');
 if(regionSelect){
     regionSelect = document.addEventListener('change', (event)=>{
         const region = event.target.value;
@@ -108,6 +114,7 @@ if(regionSelect){
 };
 
 
+//filtering countries by region using a map
 const radios = document.querySelectorAll('.pin input[type="radio"]');
 if(radios){
     radios.forEach(radio => {
