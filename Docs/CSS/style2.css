@@ -3,14 +3,22 @@ form, input{
     outline: no;
 }
 
-.input-contenedor{
+.input-container, .select-container{
   display: flex;
   /* gap: 10px */
   background-color: var(--blanco);
   border-radius: 50px;
   width: 90%;
-  padding: 5px;
   margin-top: 50px;
+}
+
+.input-container{
+    padding: 5px;
+}
+
+.select-container{
+    margin-top: 150px;
+    width: 50%;
 }
 
 .text__input{
@@ -57,11 +65,25 @@ form, input{
     background-color: var(--violet);
 } */
 
+.main-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .card{
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
     height: auto;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #a8a8a8;
 }
 
 .card-body{
@@ -110,7 +132,7 @@ form, input{
        
     }
     
-    .input-contenedor{
+    .input-container{
         width: 75%;
         margin-top: 100px;
     }
@@ -119,7 +141,7 @@ form, input{
         height: 150px;
     }
     .card-body img {
-        margin-left: 50px;
+        margin-left: 20px;
     }
            
     .card-body p {

@@ -1,23 +1,23 @@
 
-let paises = [];
+let countries = [];
 
-async function ObtenerPaises() {
+async function getCountries() {
     try {
-        const storePaises = localStorage.getItem('paises');
+        const storeCountries = localStorage.getItem('countries');
         
-        if(storePaises){
-            paises = JSON.parse(storePaises);
-            console.log('localstorage',paises)
+        if(storeCountries){
+            countries = JSON.parse(storeCountries);
+            console.log('localstorage',countries)
         }
         else{
-            const llamadaApi = await fetch('https://restcountries.co/v3.1/all')
-            const respuesta = await llamadaApi.json();
-            console.log('paises', respuesta)
-            localStorage.setItem('paises', JSON.stringify(respuesta)); 
-            return respuesta
+            const llamadaApi = await fetch('https://restcountries.com/v3.1/all')
+            const response = await llamadaApi.json();
+            console.log('countries', response)
+            localStorage.setItem('countries', JSON.stringify(response)); 
+            return response
         }
     } catch (error) {
-        console.log('Error al realizar la consulta', error)
+        console.log('Error when performing the query', error)
     }
 }
 
